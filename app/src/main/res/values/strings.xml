@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Complex Calculator</string>
+
+    <string name="bil_Real">Bil Real</string>
+    <string name="bil_Imajiner">Bil Imajiner</string>
+    <string name="optTambah">+</string>
+    <string name="optKurang">-</string>
+    <string name="optKali">*</string>
+    <string name="optBagi">/</string>
+    <string name="action_settings">Settings</string>
+</resources>

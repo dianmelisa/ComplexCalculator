@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:onClick="onClickTombolHasil">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="7"
+        android:id="@+id/angkaReal1"
+        android:layout_below="@+id/txtBilReal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="7"
+        android:id="@+id/angkaImajiner1"
+        android:layout_above="@+id/allOption"
+        android:layout_toRightOf="@+id/angkaReal1"
+        android:layout_toEndOf="@+id/angkaReal1" />
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/angkaReal1"
+        android:layout_height="wrap_content"
+        android:id="@+id/allOption">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/optTambah"
+            android:id="@+id/optTambah"
+            android:layout_below="@+id/angkaReal1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/optKurang"
+            android:id="@+id/optKurang"
+            android:layout_below="@+id/optTambah"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/optKali"
+            android:id="@+id/optKali"
+            android:layout_below="@+id/optTambah"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/optBagi"
+            android:id="@+id/optBagi"
+            android:layout_alignTop="@+id/optTambah"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:checked="false" />
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="7"
+        android:id="@+id/angkaReal2"
+        android:layout_below="@+id/allOption"
+        android:layout_toLeftOf="@+id/angkaImajiner2"
+        android:layout_toStartOf="@+id/angkaImajiner2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="7"
+        android:id="@+id/angkaImajiner2"
+        android:layout_alignTop="@+id/angkaReal2"
+        android:layout_toRightOf="@+id/angkaReal1"
+        android:layout_toEndOf="@+id/angkaReal1" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:id="@+id/btnHasil"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/angkaImajiner2"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickTombolHasil" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0"
+        android:id="@+id/lblHasil"
+        android:layout_below="@+id/btnHasil"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/bil_Real"
+        android:id="@+id/txtBilReal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/bil_Imajiner"
+        android:id="@+id/txtBilImajiner"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/angkaImajiner1"
+        android:layout_alignStart="@+id/angkaImajiner1" />
+
+</RelativeLayout>
